@@ -45,17 +45,20 @@ Check notification
     ${ACTUAL_TEXT} =  Get Text  ${ERROR_NOTIFICATION}
     Should Be Equal As Strings  ${ACTUAL_TEXT}  ${EXPECTED_ERROR}
 
+Click Problems logging in
+    Wait Until Element Is Visible  ${PROBLEMS_LINK}
+    Click Element  ${PROBLEMS_LINK}
+
 Problems logging in link is correct
     Wait Until Element Is Visible  ${PROBLEMS_LINK}
     ${ACTUAL_TEXT} =  Get Text  ${PROBLEMS_LINK}
     Should Be Equal As Strings  ${ACTUAL_TEXT}  ${EXPECTED_PROBLEMS_LINK_TEXT}  ignore_case=true
 
-Click Problems logging in
-    Wait Until Element Is Visible  ${PROBLEMS_LINK}
-    Click Element  ${PROBLEMS_LINK}
+Click No account link
+    Wait Until Element Is Visible  ${NO_ACCOUNT_LINK}
+    Click Element  ${NO_ACCOUNT_LINK}
 
 Account registration link is correct
     Wait Until Element Is Visible  ${NO_ACCOUNT_LINK}
     ${ACTUAL_TEXT} =  Get Text  ${NO_ACCOUNT_LINK}
     Should Be Equal As Strings  ${ACTUAL_TEXT}  ${EXPECTED_NO_ACCOUNT_LINK_TEXT}  ignore_case=true
-
