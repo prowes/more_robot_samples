@@ -44,6 +44,14 @@ The Privacy statement link is shown correctly
     ${ACTUAL_TEXT} =  Get Text  ${DESCRIPTION}
     Should Be Equal As Strings  ${ACTUAL_TEXT}  ${PRIVACY_STATEMENT}
 
+Click the Privacy statement link
+    Wait Until Element Is Visible  ${PRIVACY_STATEMENT}
+    Click Element  ${PRIVACY_STATEMENT}
+
+Click the About link
+    Wait Until Element Is Visible  ${ABOUT}
+    Click Element  ${ABOUT}
+
 The About link is shown correctly
     Wait Until Element Is Visible  ${PRIVACY_STATEMENT}
     ${ACTUAL_TEXT} =  Get Text  ${DESCRIPTION}

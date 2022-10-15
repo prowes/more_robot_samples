@@ -3,6 +3,8 @@ Resource  ../Resources/PO/Main_page.robot
 Resource  ../Resources/PO/Login_section.robot
 Resource  ../Resources/PO/Login_problems_popup.robot
 Resource  ../Resources/PO/No_account_popup.robot
+Resource  ../Resources/PO/Privacy_statement.robot
+Resource  ../Resources/PO/About.robot
 Resource  ../Resources/Common.robot
 Test Setup  common.Begin Web Test
 Test Teardown  common.End Web Test
@@ -46,3 +48,15 @@ The "Don't have an account" pop-up is shown correctly
     No_account_popup.Title is correct
     No_account_popup.Text is visible
     No_account_popup.Click Close and check
+
+The Privacy policy pop-up is shown correctly
+    [tags]    regression
+    Main_page.Click the Privacy statement link
+    Privacy_statement.Text is shown
+    Privacy_statement.Click Close and check
+
+The About pop-up is shown correctly
+    [tags]    regression
+    Main_page.Click the About link
+    About.Elements are shown
+    About.Click Close and check

@@ -23,4 +23,3 @@ Click Close and check
     Wait Until Element Is Visible  ${POPUP_CLOSE_BUTTON}
     Click Element  ${POPUP_CLOSE_BUTTON}
     Wait Until Element Is Not Visible  ${POPUP_TITLE}
-
